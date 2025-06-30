@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: rebeccapurple;
+    width: 600px;
+    height: 600px;
+    
+    
+}
+
+.gridSquare {
+    height: 25px;
+    width: 25px;
+    background-color: whitesmoke;
+    box-shadow:  1px 1px rgba(0, 0, 0, 0.2),
+    -1px -1px rgba(0, 0, 0, 0.2);
+}
+
