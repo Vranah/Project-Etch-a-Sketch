@@ -7,10 +7,32 @@ const createGrid =function(number) {
         for (let j = 0; j < number; j++) {
             const gridSquare = document.createElement(`div`);
             gridSquare.classList.add(`gridSquare`);
-            gridSquare.style.width = `${600 / number}px`;
-            gridSquare.style.height = `${600 / number}px`;
+            gridSquare.style.width = `${960 / number}px`;
+            gridSquare.style.height = `${960 / number}px`;
             container.appendChild(gridSquare);
     }}
 };
 
-createGrid(60)
+const colorBlack = function(e) {
+    e.preventDefault();
+    e.target.style.backgroundColor = `black`;
+    
+}
+
+
+container.addEventListener(`mousedown`, (e) => {
+    e.preventDefault();
+    container.addEventListener(`mouseover`, colorBlack)
+    });
+    window.addEventListener(`mouseup`, (e) => {
+        e.preventDefault();
+        container.removeEventListener(`mouseover`, colorBlack)
+    });
+
+createGrid(62)
+
+
+
+
+    
+
