@@ -8,7 +8,7 @@ const userInput = document.querySelector(`.grid-size`);
 
 const createGrid = function(number) {
     if ( number < 16 || number > 100){
-        window.alert(`Invalid Input`)
+        window.alert(`Invalid input. Grid size value is between 16-100`)
         createGrid(16);
     }else {
     for (let i = 0; i < number * number; i++) {
@@ -49,7 +49,8 @@ let hasColorFn = false;
 
 const colorBlack = function(e) {
     e.preventDefault();
-    e.target.style.backgroundColor = `black`;
+    e.target.style.backgroundColor = `black`
+    
     
 };
 
@@ -127,6 +128,7 @@ white.addEventListener(`click`, () => {
 
 createGrid(16);
 draw(colorBlack);
+
 
 
 

@@ -23,8 +23,6 @@ body {
 .name-container {
     display: flex;
     background-color: linear-gradient(45deg, red 0 100%);
-    
-    
 }
 
 .name {
@@ -53,21 +51,11 @@ body {
     box-shadow: 12px 12px 2px 1px  #ff6f3c;
 }
 
-.sketch-controls {
-    height: 200px;
-    width: 500px;
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    
-    
 
-}
 
 .grid-controls {
     display: flex;
     flex-direction: column;
-    
 }
 
 .grid-size {
@@ -79,7 +67,6 @@ body {
     border: 2px solid #155263;
     box-shadow: 12px 12px 2px 1px  #ff6f3c;
     text-align: center;
-
 }
 
 .grid-size:hover {
@@ -94,12 +81,20 @@ body {
     background-color: white;
     box-shadow: 12px 12px 2px 1px  #ff6f3c;
     border: 2px solid #155263;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .clear-grid:hover, .generate-grid:hover {
-    font-size: 19px;
-    
+    font-size: 17px;
+}
+
+.sketch-controls {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .colorControls {
@@ -108,6 +103,7 @@ body {
     border-radius: 15px;
     box-shadow: 12px 12px 2px 1px  #ff6f3c;
     border: 2px solid #155263;
+    margin: 4px;
     
 }
 
