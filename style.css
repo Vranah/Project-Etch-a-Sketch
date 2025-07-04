@@ -1,21 +1,118 @@
 * {
     box-sizing: border-box;
-    
+    font-family: "Sofia", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 body {
     display: flex;
     justify-content: space-evenly;
+    background-color:  #155263;
+    
 
 }
 
-.control_container {
+.name-container {
     display: flex;
-    flex-direction: row;
+    background-color: linear-gradient(45deg, red 0 100%);
+    
+    
+}
+
+.name {
+    font-size: 52px;
+}
+
+
+.info, .color-info {
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
+.controls-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: aquamarine;
+    background-color:  #ff9a3c;
     height: 960px ;
+    width: 600px;
+    margin: 25px;
+    border-radius: 15px;
+    box-shadow: 12px 12px 2px 1px  #ff6f3c;
+}
+
+.sketch-controls {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    
+    
+
+}
+
+.grid-controls {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.grid-size {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 2px solid #155263;
+    box-shadow: 12px 12px 2px 1px  #ff6f3c;
+    text-align: center;
+
+}
+
+.grid-size:hover {
+    font-size: 40px;
+}
+
+.clear-grid, .generate-grid {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 12px 12px 2px 1px  #ff6f3c;
+    border: 2px solid #155263;
+    font-size: 18px;
+}
+
+.clear-grid:hover, .generate-grid:hover {
+    font-size: 19px;
+    
+}
+
+.colorControls {
+    height: 75px;
+    width: 75px;
+    border-radius: 15px;
+    box-shadow: 12px 12px 2px 1px  #ff6f3c;
+    border: 2px solid #155263;
+    
+}
+
+.colorControls:hover {
+    outline: 5px solid #155263 ;
 }
 
 
@@ -25,21 +122,18 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: rebeccapurple;
     width: 960px;
     height: 960px;
-    outline: 5px solid black;
     margin: 25px;
-    
+    border-radius: 15px;
+    box-shadow: 12px 12px 2px 1px  #ff6f3c;
     
 }
 
 .gridSquare {
-    height: 25px;
-    width: 25px;
-    background-color: whitesmoke;
-    box-shadow:  1px 1px rgba(0, 0, 0, 0.2),
-    -1px -1px rgba(0, 0, 0, 0.2);
-    
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.2),
+                -1px -1px rgba(0, 0, 0, 0.2);
 }
 

@@ -5,17 +5,26 @@
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="sketch.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
 <body>
-    <div class="controls_container">
-        <div class="name">NAME</div>
-        <div class="grid-control">big control slider</div>
-        <div class="sketch-controls">
-            <div>Test</div>
-            <div>Test</div>
-            <div>Test</div>
-            <div>Test</div>
+    <div class="controls-container">
+        <div class="name-container"><h1 class="name">ETCH A SKETCH</h1></div>
+        <div class="info-container"><p class="info">Choose a grid size between 16-100, pick a color and have FUN!</p></div>
+        <div class="grid-controls">
+            <div ><input type="number" min="16" max="100" placeholder="32" class="grid-size"></div>
+            <button class="generate-grid">Generate</button>
+            <button class="clear-grid">Clear Grid</button>
         </div>
+        <div class="sketch-controls">
+            <div><button class="colorControls black" style="background-color: black;"></button></div>
+            <div><button class="colorControls red" style="background-color: red;"></button></div>
+            <div><button class="colorControls blue" style="background-color: blue;"></button></div>
+            <div><button class="colorControls green" style="background-color: green;"></button></div>
+            <div><button class="colorControls rbw" style="background: linear-gradient(in hsl longer hue 45deg, red 0 100%);"></button></div>
+            <div><button class="colorControls white" style="background-color: white;"></button></div>
+        </div>
+        
     </div>
     <div class="container"></div>
 </body>
