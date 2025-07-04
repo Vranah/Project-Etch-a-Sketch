@@ -85,7 +85,7 @@ body {
 }
 
 .clear-grid:hover, .generate-grid:hover {
-    font-size: 17px;
+    border: 5px solid #155263;
 }
 
 .sketch-controls {
