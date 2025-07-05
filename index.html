@@ -8,23 +8,26 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
 <body>
-    <div class="controls-container">
-        <div class="name-container"><h1 class="name">ETCH A SKETCH</h1></div>
-        <div class="info-container"><p class="info">Choose a grid size between 16-100, pick a color and have FUN!</p></div>
-        <div class="grid-controls">
-            <div ><input type="number" min="16" max="100" placeholder="16" class="grid-size"></div>
-            <button class="generate-grid">Generate</button>
-            <button class="clear-grid">Clear Grid</button>
-        </div>
-        <div class="sketch-controls">
-            <div><button class="colorControls black" style="background-color: black;"></button></div>
-            <div><button class="colorControls red" style="background-color: red;"></button></div>
-            <div><button class="colorControls blue" style="background-color: blue;"></button></div>
-            <div><button class="colorControls green" style="background-color: green;"></button></div>
-            <div><button class="colorControls rbw" style="background: linear-gradient(in hsl longer hue 45deg, red 0 100%);"></button></div>
-            <div><button class="colorControls white" style="background-color: white;"></button></div>
-        </div>
-     </div>
-     <div class="container"></div>
+    <div class="page-wrapper">
+        <div class="controls-container">
+            <div class="name-container"><h1 class="name">ETCH A SKETCH</h1></div>
+            <div class="info-container"><p class="info">Choose a grid size between 16-100, pick a color and have FUN!</p></div>
+            <div class="grid-controls">
+                <div class="sliderOutputContainer"></div>
+                <div ><input type="range" min="16" max="100" value="42" class="grid-size"></div>
+                <button class="generate-grid">Generate</button>
+                <button class="clear-grid">Clear Grid</button>
+            </div>
+            <div class="sketch-controls">
+                <div><button class="colorControls black" style="background-color: black;"></button></div>
+                <div><button class="colorControls red" style="background-color: red;"></button></div>
+                <div><button class="colorControls blue" style="background-color: blue;"></button></div>
+                <div><button class="colorControls green" style="background-color: green;"></button></div>
+                <div><button class="colorControls rbw" style="background: linear-gradient(in hsl longer hue 45deg, red 0 100%);"></button></div>
+                <div><button class="colorControls white" style="background-color: white;"></button></div>
+            </div>
+         </div>
+         <div class="container"></div>
+    </div>
 </body>
 </html>

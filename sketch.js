@@ -2,24 +2,22 @@ const container = document.querySelector(`.container`);
 const generateGrid = document.querySelector(`.generate-grid`);
 const clearGrid = document.querySelector(`.clear-grid`);
 const userInput = document.querySelector(`.grid-size`);
+const sliderOutput = document.querySelector(`.sliderOutputContainer`);
 
 
 // GRID & CONTROLS
 
 const createGrid = function(number) {
-    if ( number < 16 || number > 100){
-        window.alert(`Invalid input. Grid size value is between 16-100`)
-        createGrid(16);
-    }else {
+  
     for (let i = 0; i < number * number; i++) {
             const gridSquare = document.createElement(`div`);
             gridSquare.classList.add(`gridSquare`);
-            gridSquare.style.width = `calc(100% / ${number}`;
-            gridSquare.style.height = `calc(100% / ${number}`;
+            gridSquare.style.width = `calc(100% / ${number})`;
+            gridSquare.style.height = `calc(100% / ${number})`;
             container.appendChild(gridSquare);
             
     }};
-};
+
 const clearGrd = function(e) {
     let squares = document.querySelectorAll(`.gridSquare`);
     squares.forEach(square => square.style.backgroundColor = `white`)
@@ -31,10 +29,20 @@ clearGrid.addEventListener(`click`, () => {
 });
 
 generateGrid.addEventListener(`click`, () => {
-    container.innerHTML = ` `;
-    createGrid(userInput.value)
+    container.innerHTML = '';
+    createGrid(userInput.value);
     
 });
+
+sliderOutput.innerHTML = userInput.value;
+userInput.oninput = function() {
+    sliderOutput.innerHTML = this.value;
+  }
+
+  userInput.addEventListener('focus', () => console.log('SLIDER: focus'));
+userInput.addEventListener('blur', ()  => console.log('SLIDER: blur'));
+userInput.addEventListener('change', ()=> console.log('SLIDER: change'));
+userInput.addEventListener('mouseup', ()=> console.log('SLIDER: mouseup'));
 
 
 
@@ -126,7 +134,7 @@ white.addEventListener(`click`, () => {
     draw(colorWhite);
 });
 
-createGrid(16);
+createGrid(42);
 draw(colorBlack);
 
 
